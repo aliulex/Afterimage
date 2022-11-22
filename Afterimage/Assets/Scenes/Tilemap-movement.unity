@@ -4664,6 +4664,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1778191694}
   runSpeed: 100
+  dashSpeed: 35
+  startDashCount: 0.1
+  rb: {fileID: 1778191693}
 --- !u!1 &1949531711
 GameObject:
   m_ObjectHideFlags: 0
