@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     public float startDashCount;
     private bool FaceRight = true;
     public Rigidbody2D rb;
-    public Animator anim;
     
     void Start() {
         dashCount = startDashCount;
@@ -42,12 +41,6 @@ public class PlayerMovement : MonoBehaviour
         if ((hvMove.x <0 && !FaceRight) || (hvMove.x >0 && FaceRight)){
                         FaceRight = !FaceRight;
                   }
-        if (hvMove.x != 0) {
-            anim.SetBool("Walk", true);
-        }
-        else {
-            anim.SetBool("Walk", false);
-        }
 
 
         if (Input.GetKeyDown(KeyCode.E)) {
@@ -75,6 +68,12 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    void OnCollisionEnter2D(Collision2D other){
+        if (other.gameObject.tag == "enemy"){
+            Destroy(other.gameObject);
+        }
+     }
 
 
 
