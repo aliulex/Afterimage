@@ -11,6 +11,16 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     // bool crouch = false;
 
+    public float dashSpeed;
+    private float dashCount;
+    public float startDashCount;
+    private bool FaceRight = true;
+    public Rigidbody2D rb;
+    
+    void Start() {
+        dashCount = startDashCount;
+    }
+
     // Update is called once per frame
     void Update() {
         
@@ -24,8 +34,42 @@ public class PlayerMovement : MonoBehaviour
         //     crouch = false;
         // }
 
+         Vector3 hvMove = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
 
+        
+
+        if ((hvMove.x <0 && !FaceRight) || (hvMove.x >0 && FaceRight)){
+                        FaceRight = !FaceRight;
+                  }
+
+
+        if (Input.GetKeyDown(KeyCode.E)) {
+            if (dashCount <= 0) {
+                dashCount = startDashCount;
+                rb.velocity = Vector2.zero;
+            }
+            else {
+                dashCount -= Time.deltaTime;
+
+                if (!FaceRight) {
+                    rb.velocity = Vector2.left * dashSpeed;
+                }
+                else if (FaceRight) {
+                    rb.velocity = Vector2.right * dashSpeed;
+                }
+            }
+            dashCount -= Time.deltaTime;
+
+            if (FaceRight) {
+                rb.velocity = Vector2.left * dashSpeed;
+            }
+            else if (!FaceRight) {
+                rb.velocity = Vector2.right * dashSpeed;
+            }
+        }
     }
+
+
 
     void FixedUpdate() {
 
