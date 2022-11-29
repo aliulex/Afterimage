@@ -52,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         if (Input.GetKeyDown(KeyCode.E)) {
+            anim.SetTrigger("Dash");
             if (dashCount <= 0) {
                 dashCount = startDashCount;
                 rb.velocity = Vector2.zero;
