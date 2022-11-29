@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     private bool FaceRight = true;
     public Rigidbody2D rb;
     public Animator anim;
+
+    private bool dashing = false;
     
     void Start() {
         dashCount = startDashCount;
@@ -52,6 +54,11 @@ public class PlayerMovement : MonoBehaviour
 
 
         if (Input.GetKeyDown(KeyCode.E)) {
+
+            dashing = true;
+            StopCoroutine(DashDuration());
+            StartCoroutine(DashDuration());
+
             anim.SetTrigger("Dash");
             if (dashCount <= 0) {
                 dashCount = startDashCount;
@@ -79,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D other){
-        if (other.gameObject.tag == "enemy"){
+        if ((other.gameObject.tag == "enemy") && dashing){
             Destroy(other.gameObject);
         }
      }
@@ -92,6 +99,12 @@ public class PlayerMovement : MonoBehaviour
         jump = false;
 
 
+    }
+
+    IEnumerator DashDuration(){
+        yield return new WaitForSeconds(0.5f);
+        dashing = false;
+        yield return null;
     }
 
 
