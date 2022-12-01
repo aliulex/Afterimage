@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     private bool FaceRight = true;
     public Rigidbody2D rb;
     public Animator anim;
+    public CircleCollider2D cc;
+    
+    private bool dashingCooldown = false;
 
     private bool dashing = false;
     
@@ -51,9 +54,10 @@ public class PlayerMovement : MonoBehaviour
         else {
             anim.SetBool("Walk", false);
         }
+        
 
-
-        if (Input.GetKeyDown(KeyCode.E)) {
+        if (Input.GetKeyDown(KeyCode.E) && (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 1)  && !dashingCooldown) {
+            dashingCooldown = true;
 
             dashing = true;
             StopCoroutine(DashDuration());
@@ -61,25 +65,44 @@ public class PlayerMovement : MonoBehaviour
 
             anim.SetTrigger("Dash");
             if (dashCount <= 0) {
+                Debug.Log(dashCount);
                 dashCount = startDashCount;
                 rb.velocity = Vector2.zero;
             }
             else {
                 dashCount -= Time.deltaTime;
 
-                if (!FaceRight) {
+                if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 1) {
+                    rb.velocity = Vector2.up * dashSpeed/2;
+                }
+                else if (Input.GetAxisRaw("Horizontal") == -1 && Input.GetAxisRaw("Vertical") == 1) {
+                    rb.velocity = Vector2.left * dashSpeed + Vector2.up * dashSpeed/2;
+                }
+                else if (Input.GetAxisRaw("Horizontal") == 1 && Input.GetAxisRaw("Vertical") == 1) {
+                    rb.velocity = Vector2.right * dashSpeed + Vector2.up * dashSpeed/2;
+                }
+                else if (Input.GetAxisRaw("Horizontal") == -1) {
                     rb.velocity = Vector2.left * dashSpeed;
                 }
-                else if (FaceRight) {
+                else if (Input.GetAxisRaw("Horizontal") == 1) {
                     rb.velocity = Vector2.right * dashSpeed;
                 }
             }
             dashCount -= Time.deltaTime;
 
-            if (FaceRight) {
+            if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 1) {
+                rb.velocity = Vector2.up * dashSpeed/2;
+            }
+            else if (Input.GetAxisRaw("Horizontal") == -1 && Input.GetAxisRaw("Vertical") == 1) {
+                rb.velocity = Vector2.left * dashSpeed + Vector2.up * dashSpeed/2;
+            }
+            else if (Input.GetAxisRaw("Horizontal") == 1 && Input.GetAxisRaw("Vertical") == 1) {
+                rb.velocity = Vector2.right * dashSpeed + Vector2.up * dashSpeed/2;
+            }
+            else if (Input.GetAxisRaw("Horizontal") == -1) {
                 rb.velocity = Vector2.left * dashSpeed;
             }
-            else if (!FaceRight) {
+            else if (Input.GetAxisRaw("Horizontal") == 1) {
                 rb.velocity = Vector2.right * dashSpeed;
             }
         }
@@ -104,6 +127,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator DashDuration(){
         yield return new WaitForSeconds(0.5f);
         dashing = false;
+        dashingCooldown = false;
         yield return null;
     }
 
