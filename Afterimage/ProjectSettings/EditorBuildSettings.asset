@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tilemap-movement.unity
     guid: 848e2af79bb211d44a2317fc5aafb538
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 936501ad386e3491bb63c84832208615
   m_configObjects: {}
