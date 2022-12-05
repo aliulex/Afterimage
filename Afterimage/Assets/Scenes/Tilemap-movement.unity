@@ -8791,6 +8791,7 @@ MonoBehaviour:
   rb: {fileID: 1778191693}
   anim: {fileID: 1108145930}
   cc: {fileID: 1778191695}
+  nextLevel: Level 2
 --- !u!1 &1821804750
 GameObject:
   m_ObjectHideFlags: 0

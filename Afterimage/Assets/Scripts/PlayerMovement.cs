@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private bool dashingCooldown = false;
 
     private bool dashing = false;
+    public string nextLevel = "";
     
     void Start() {
         dashCount = startDashCount;
@@ -114,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
             Destroy(other.gameObject);
         } 
         if (other.gameObject.tag == "flag") {
-            SceneManager.LoadScene("Level 2");
+            SceneManager.LoadScene(nextLevel);
         }
      }
 
