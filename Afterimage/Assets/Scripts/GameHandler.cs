@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameHandler : MonoBehaviour{
 
         [SerializeField] GameObject pauseMenu;
+        public string currentLevel = "";
 
         public void Pause() {
                 pauseMenu.SetActive(true);
@@ -25,7 +26,7 @@ public class GameHandler : MonoBehaviour{
 
         public void Restart() {
                 Time.timeScale = 1f;
-                SceneManager.LoadScene("Tilemap-movement");
+                SceneManager.LoadScene(currentLevel);
         }
 
         void Start() {
