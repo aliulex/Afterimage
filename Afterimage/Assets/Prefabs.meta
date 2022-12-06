@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c79eb3deced9b4fecb544beb321342a7
+=======
+guid: deda9729c3d1d2f4bba097da9ef650fa
+>>>>>>> enemy-shooting
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
