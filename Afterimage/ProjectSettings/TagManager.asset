@@ -6,6 +6,7 @@ TagManager:
   tags:
   - enemy
   - flag
+  - PauseMenuSlider
   layers:
   - Default
   - TransparentFX
