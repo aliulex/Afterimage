@@ -9,7 +9,6 @@ public class GameHandler : MonoBehaviour{
 
         [SerializeField] GameObject pauseMenu;
         public string currentLevel = "";
-
         public static bool GameisPaused = false;
         public AudioMixer mixer;
         public static float volumeLevel = 1.0f;
