@@ -5,13 +5,14 @@ using UnityEngine;
 public class KillPlayer : MonoBehaviour
 {
 
-    public GameObject player;
-    public Transform respawnPoint;
+    private GameObject player;
+    private Transform respawnPoint;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
+        respawnPoint = GameObject.FindGameObjectWithTag("Respawn").transform;
     }
 
     // Update is called once per frame
