@@ -881,6 +881,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7017051545885064328, guid: 8d6a0307026954ccfbb9857fa4c62cef, type: 3}
   m_PrefabInstance: {fileID: 429664778}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &429664782 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8603864011609152168, guid: 8d6a0307026954ccfbb9857fa4c62cef, type: 3}
+  m_PrefabInstance: {fileID: 429664778}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &630907075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -997,6 +1002,10 @@ PrefabInstance:
       propertyPath: nextLevel
       value: Tilemap-Movement
       objectReference: {fileID: 0}
+    - target: {fileID: 3263486224659374518, guid: cd3cabf7231cd4387884baf91c249107, type: 3}
+      propertyPath: clearScreen
+      value: 
+      objectReference: {fileID: 429664782}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd3cabf7231cd4387884baf91c249107, type: 3}
 --- !u!1 &956908873
@@ -1941,6 +1950,10 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 429664779}
+    - target: {fileID: 5186409558319125208, guid: 35f0ac139dca44a32b53ac4e0a58eb4d, type: 3}
+      propertyPath: clearScreen
+      value: 
+      objectReference: {fileID: 429664782}
     - target: {fileID: 5186409558319125208, guid: 35f0ac139dca44a32b53ac4e0a58eb4d, type: 3}
       propertyPath: currentLevel
       value: Level 2

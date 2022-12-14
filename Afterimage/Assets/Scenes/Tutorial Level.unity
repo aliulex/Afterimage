@@ -2036,6 +2036,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7017051545885064328, guid: 8d6a0307026954ccfbb9857fa4c62cef, type: 3}
   m_PrefabInstance: {fileID: 1338195910}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1338195914 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8603864011609152168, guid: 8d6a0307026954ccfbb9857fa4c62cef, type: 3}
+  m_PrefabInstance: {fileID: 1338195910}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1599332806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2055,6 +2060,10 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1338195911}
+    - target: {fileID: 5186409558319125208, guid: 35f0ac139dca44a32b53ac4e0a58eb4d, type: 3}
+      propertyPath: clearScreen
+      value: 
+      objectReference: {fileID: 1338195914}
     - target: {fileID: 5186409558319125208, guid: 35f0ac139dca44a32b53ac4e0a58eb4d, type: 3}
       propertyPath: currentLevel
       value: Tutorial Level
@@ -2334,5 +2343,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3263486224659374518, guid: cd3cabf7231cd4387884baf91c249107, type: 3}
+      propertyPath: clearScreen
+      value: 
+      objectReference: {fileID: 1338195914}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd3cabf7231cd4387884baf91c249107, type: 3}

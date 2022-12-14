@@ -8,6 +8,7 @@ TagManager:
   - flag
   - PauseMenuSlider
   - RespawnPoint
+  - clearScreen
   layers:
   - Default
   - TransparentFX

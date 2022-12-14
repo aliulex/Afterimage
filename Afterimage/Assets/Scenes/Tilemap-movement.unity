@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ee721a8e42a144180f88cc70eebb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2474044803628172007, guid: a88a4eaaea12bd246b99fc214f3586f0, type: 3}
+  bullet: {fileID: 522004827879143449, guid: a88a4eaaea12bd246b99fc214f3586f0, type: 3}
   bulletPos: {fileID: 222762474}
 --- !u!50 &272328648
 Rigidbody2D:
@@ -500,7 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ee721a8e42a144180f88cc70eebb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2474044803628172007, guid: a88a4eaaea12bd246b99fc214f3586f0, type: 3}
+  bullet: {fileID: 522004827879143449, guid: a88a4eaaea12bd246b99fc214f3586f0, type: 3}
   bulletPos: {fileID: 1086482151}
 --- !u!50 &331944232
 Rigidbody2D:
@@ -4743,7 +4743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ee721a8e42a144180f88cc70eebb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2474044803628172007, guid: a88a4eaaea12bd246b99fc214f3586f0, type: 3}
+  bullet: {fileID: 522004827879143449, guid: a88a4eaaea12bd246b99fc214f3586f0, type: 3}
   bulletPos: {fileID: 2143936225}
 --- !u!50 &888484489
 Rigidbody2D:
@@ -4844,6 +4844,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &978768006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8603864011609152168, guid: 8d6a0307026954ccfbb9857fa4c62cef, type: 3}
+  m_PrefabInstance: {fileID: 3212306265710391860}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1019802190
 GameObject:
   m_ObjectHideFlags: 0
@@ -4892,7 +4897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ee721a8e42a144180f88cc70eebb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2474044803628172007, guid: a88a4eaaea12bd246b99fc214f3586f0, type: 3}
+  bullet: {fileID: 522004827879143449, guid: a88a4eaaea12bd246b99fc214f3586f0, type: 3}
   bulletPos: {fileID: 1741916073}
 --- !u!50 &1019802193
 Rigidbody2D:
@@ -9639,6 +9644,10 @@ PrefabInstance:
       propertyPath: nextLevel
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 3263486224659374518, guid: cd3cabf7231cd4387884baf91c249107, type: 3}
+      propertyPath: clearScreen
+      value: 
+      objectReference: {fileID: 978768006}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd3cabf7231cd4387884baf91c249107, type: 3}
 --- !u!1001 &3559958534359130780
@@ -9717,6 +9726,10 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 763520750}
+    - target: {fileID: 5186409558319125208, guid: 35f0ac139dca44a32b53ac4e0a58eb4d, type: 3}
+      propertyPath: clearScreen
+      value: 
+      objectReference: {fileID: 978768006}
     - target: {fileID: 5186409558319125208, guid: 35f0ac139dca44a32b53ac4e0a58eb4d, type: 3}
       propertyPath: gameOverText
       value: 

@@ -9,6 +9,7 @@ public class GameHandler : MonoBehaviour{
 
         [SerializeField] GameObject pauseMenu;
         [SerializeField] GameObject failMenu;
+        [SerializeField] GameObject clearScreen;
         public string currentLevel = "";
         public static bool GameisPaused = false;
         public AudioMixer mixer;
@@ -57,6 +58,7 @@ public class GameHandler : MonoBehaviour{
         void Start() {
                 pauseMenu.SetActive(false);
                 failMenu.SetActive(false);
+                clearScreen.SetActive(false);
                 GameisPaused = false;
                 UpdateTime();
         }
