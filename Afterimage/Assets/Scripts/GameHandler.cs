@@ -8,11 +8,15 @@ using UnityEngine.Audio;
 public class GameHandler : MonoBehaviour{
 
         [SerializeField] GameObject pauseMenu;
+        [SerializeField] GameObject failMenu;
         public string currentLevel = "";
         public static bool GameisPaused = false;
         public AudioMixer mixer;
         public static float volumeLevel = 1.0f;
         private Slider sliderVolumeCtrl;
+        public GameObject timeText;
+        public int gameTime = 60;
+        public float gameTimer = 0f;
 
         void Awake (){
                 SetLevel (volumeLevel);
@@ -52,7 +56,9 @@ public class GameHandler : MonoBehaviour{
 
         void Start() {
                 pauseMenu.SetActive(false);
+                failMenu.SetActive(false);
                 GameisPaused = false;
+                UpdateTime();
         }
 
         void Update(){         //delete this quit functionality when a Pause Menu is added
@@ -62,6 +68,28 @@ public class GameHandler : MonoBehaviour{
                         } else {
                                 Pause();
                         }
+                }
+        }
+
+        public void UpdateTime(){
+                Text timeTextB = timeText.GetComponent<Text>();
+                timeTextB.text = "" + gameTime;
+        }
+
+        void FixedUpdate() {
+                gameTimer += 0.02f;
+                if (gameTimer >= 1f){
+                        if (gameTime > 0) {
+                                gameTime -= 1;
+                        }
+                        gameTimer = 0;
+                        UpdateTime();
+                }
+                if (gameTime <= 0){
+                        gameTime = 0;
+                        Time.timeScale = 0f;
+                        GameisPaused = true;
+                        failMenu.SetActive(true);
                 }
         }
 }

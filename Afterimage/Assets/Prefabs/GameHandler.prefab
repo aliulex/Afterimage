@@ -47,3 +47,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 0}
   currentLevel: Tilemap-movement
   mixer: {fileID: 24100000, guid: 72e27516c6e364c05854463499d05ab9, type: 2}
+  timeText: {fileID: 0}
+  gameOverText: {fileID: 0}
+  gameTime: 60
+  gameTimer: 0
