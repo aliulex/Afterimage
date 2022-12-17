@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator anim;
     public CircleCollider2D cc;
+    public GameObject dashVFX;
     
     private bool dashingCooldown = false;
 
@@ -68,6 +69,9 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(DashDuration());
 
             anim.SetTrigger("Dash");
+            gameObject.GetComponent<AudioSource>().Play();
+
+
             if (dashCount <= 0) {
                 Debug.Log(dashCount);
                 dashCount = startDashCount;
@@ -111,6 +115,8 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+
 
     void OnCollisionEnter2D(Collision2D other){
         if ((other.gameObject.tag == "enemy") && dashing){
