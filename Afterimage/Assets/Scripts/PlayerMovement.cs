@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
 
-        if (Input.GetKeyDown(KeyCode.E) && (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 1)  && !dashingCooldown) {
+        if (Input.GetKeyDown(KeyCode.K) && (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 1)  && !dashingCooldown) {
             dashingCooldown = true;
 
             dashing = true;
