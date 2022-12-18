@@ -40794,6 +40794,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 978768006}
     - target: {fileID: 5186409558319125208, guid: 35f0ac139dca44a32b53ac4e0a58eb4d, type: 3}
+      propertyPath: currentLevel
+      value: Level 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186409558319125208, guid: 35f0ac139dca44a32b53ac4e0a58eb4d, type: 3}
       propertyPath: gameOverText
       value: 
       objectReference: {fileID: 0}

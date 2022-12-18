@@ -891,6 +891,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &855029584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 855029585}
+  m_Layer: 0
+  m_Name: RespawnPoint
+  m_TagString: RespawnPoint
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &855029585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855029584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.84, y: -3.72, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &967208730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1101,7 +1132,7 @@ PrefabInstance:
       objectReference: {fileID: 967208732}
     - target: {fileID: 5186409558319125208, guid: 35f0ac139dca44a32b53ac4e0a58eb4d, type: 3}
       propertyPath: currentLevel
-      value: Level 2
+      value: Level 3
       objectReference: {fileID: 0}
     - target: {fileID: 5186409558319125209, guid: 35f0ac139dca44a32b53ac4e0a58eb4d, type: 3}
       propertyPath: m_Name
@@ -9576,6 +9607,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6192029535068609996, guid: 1c103202af8cb184c849874de9403c6e, type: 3}
+      propertyPath: nextLevel
+      value: Level 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192029535068609996, guid: 1c103202af8cb184c849874de9403c6e, type: 3}
+      propertyPath: clearScreen
+      value: 
+      objectReference: {fileID: 967208732}
     - target: {fileID: 7296424531992257692, guid: 1c103202af8cb184c849874de9403c6e, type: 3}
       propertyPath: m_Name
       value: Player 1
