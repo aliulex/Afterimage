@@ -6,6 +6,7 @@ public class SC_MainMenu : MonoBehaviour
 {
     public GameObject MainMenu;
     public GameObject CreditsMenu;
+    public GameObject StoryPage;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,13 @@ public class SC_MainMenu : MonoBehaviour
     {
         // Play Now Button has been pressed, here you can initialize your game (For example Load a Scene called GameLevel etc.)
         UnityEngine.SceneManagement.SceneManager.LoadScene("Level 1");
+    }
+
+    public void StoryButton()
+    {
+        // Show Credits Menu
+        MainMenu.SetActive(false);
+        StoryPage.SetActive(true);
     }
 
     public void CreditsButton()
@@ -31,6 +39,7 @@ public class SC_MainMenu : MonoBehaviour
         // Show Main Menu
         MainMenu.SetActive(true);
         CreditsMenu.SetActive(false);
+        StoryPage.SetActive(false);
     }
 
     public void QuitButton()
