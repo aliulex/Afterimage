@@ -43,6 +43,10 @@ public class EnemyBulletScript : MonoBehaviour
             player.transform.position = respawnPoint.position;
             Destroy(gameObject);
         }
+        if (other.gameObject.CompareTag("Wall")) {
+            Destroy(gameObject);
+        }
+
     }
 
 }
