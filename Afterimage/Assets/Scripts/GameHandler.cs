@@ -80,12 +80,14 @@ public class GameHandler : MonoBehaviour{
 
         void FixedUpdate() {
                 gameTimer += 0.02f;
-                if (gameTimer >= 1f){
-                        if (gameTime > 0) {
-                                gameTime -= 1;
+                if (!clearScreen.activeSelf) {
+                        if (gameTimer >= 1f){
+                                if (gameTime > 0) {
+                                        gameTime -= 1;
+                                }
+                                gameTimer = 0;
+                                UpdateTime();
                         }
-                        gameTimer = 0;
-                        UpdateTime();
                 }
                 if (gameTime <= 0){
                         gameTime = 0;
