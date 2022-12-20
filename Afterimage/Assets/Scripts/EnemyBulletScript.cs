@@ -9,7 +9,7 @@ public class EnemyBulletScript : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
     private float timer;
-    public Transform respawnPoint;
+    private Transform respawnPoint;
 
     // Start is called before the first frame update
     void Start()
